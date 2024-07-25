@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-25 19:39:16.570950",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "smtp_enable",
+  "smtp_settings_section",
+  "smtp_host",
+  "smtp_port",
+  "column_break_bcei",
+  "smtp_username",
+  "smtp_password"
+ ],
+ "fields": [
+  {
+   "fieldname": "smtp_settings_section",
+   "fieldtype": "Section Break",
+   "label": "SMTP Settings"
+  },
+  {
+   "fieldname": "smtp_host",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SMTP Host",
+   "reqd": 1
+  },
+  {
+   "default": "587",
+   "description": "Typically 587 for TLS, 465 for SSL",
+   "fieldname": "smtp_port",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "SMTP Port",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bcei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "smtp_username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SMTP Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "smtp_password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "SMTP Password",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Enables custom SMTP server to be used for outgoing emails",
+   "fieldname": "smtp_enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-25 19:50:06.165094",
+ "modified_by": "Administrator",
+ "module": "Email Send Override",
+ "name": "SMTP Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

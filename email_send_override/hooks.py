@@ -1,10 +1,14 @@
+import frappe
+
 app_name = "email_send_override"
 app_title = "Email Send Override"
 app_publisher = "rtCamp"
-app_description = "Override outgoing email\'s SMTP server"
+app_description = "Override outgoing emails SMTP server"
 app_email = "frappe@rtcamp.com"
 app_license = "mit"
 # required_apps = []
+
+override_email_send = "email_send_override.email.send"
 
 # Includes in <head>
 # ------------------
@@ -121,13 +125,16 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
+test_string = "value"
+test_list = ["value"]
+test_dict = {"key": "value"}
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
+#     "*": {
+#         "on_update": "email_send_override.hello.world.foo",
+#         "on_cancel": "email_send_override.hello.world.foo",
+#         "on_trash": "email_send_override.hello.world.foo",
+#     }
 # }
 
 # Scheduled Tasks
@@ -226,4 +233,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
