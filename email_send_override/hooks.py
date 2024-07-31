@@ -8,7 +8,7 @@ app_email = "frappe@rtcamp.com"
 app_license = "mit"
 # required_apps = []
 
-override_email_send = "email_send_override.email.send"
+# override_email_send = "email_send_override.email.send"
 
 # Includes in <head>
 # ------------------
@@ -118,9 +118,25 @@ override_email_send = "email_send_override.email.send"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Email Account": "email_send_override.overrides.email_account.EmailAccountOverride"
+}
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                {
+                    "Email Account-custom_outgoing_server_username",
+                    "Email Account-custom_outgoing_server_password",
+                },
+            ]
+        ],
+    },
+]
 
 # Document Events
 # ---------------
