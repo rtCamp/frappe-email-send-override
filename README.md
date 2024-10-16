@@ -20,6 +20,11 @@ bench --site [site-name] install-app email_send_override
 
 Please refer to the [wiki](https://github.com/rtCamp/frappe-email-send-override/wiki) for setting up and using the app in Frappe site.
 
-#### License
 
-This project is licensed under the MIT License.
+## Contribution Guide
+
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the [AGPLv3 License](./LICENSE).
