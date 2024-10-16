@@ -5,7 +5,7 @@ app_title = "Email Send Override"
 app_publisher = "rtCamp"
 app_description = "Override outgoing emails SMTP server"
 app_email = "frappe@rtcamp.com"
-app_license = "mit"
+app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # required_apps = []
 
 # override_email_send = "email_send_override.email.send"
