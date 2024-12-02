@@ -1,6 +1,6 @@
-# Email Send Override Frappe
+# Frappe Email Send Override
 
-The app is used to enable different usernames and passwords for outgoing and incoming servers with the same email account in Frappe.
+The app enhances the Frappe framework's Email Account functionality by enabling the configuration of different credentials for outgoing and incoming mail servers within the same email account. This feature is particularly useful when the SMTP server and the incoming mail server require separate authentication details.
 
 ## Installation
 
