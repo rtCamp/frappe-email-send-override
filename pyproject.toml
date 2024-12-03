@@ -1,5 +1,5 @@
 [project]
-name = "email_send_override"
+name = "frappe_email_send_override"
 authors = [
     { name = "rtCamp", email = "frappe@rtcamp.com"}
 ]

@@ -1,7 +1,7 @@
 import frappe
 
-app_name = "email_send_override"
-app_title = "Email Send Override"
+app_name = "frappe_email_send_override"
+app_title = "Frappe Email Send Override"
 app_publisher = "rtCamp"
 app_description = "Override outgoing emails SMTP server"
 app_email = "frappe@rtcamp.com"
