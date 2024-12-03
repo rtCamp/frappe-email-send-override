@@ -1,6 +1,4 @@
-import frappe
-
-app_name = "frappe_email_send_override"
+app_name = "frappe_frappe_email_send_override"
 app_title = "Frappe Email Send Override"
 app_publisher = "rtCamp"
 app_description = "Override outgoing emails SMTP server"
@@ -8,21 +6,21 @@ app_email = "frappe@rtcamp.com"
 app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # required_apps = []
 
-# override_email_send = "email_send_override.email.send"
+# override_email_send = "frappe_email_send_override.email.send"
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/email_send_override/css/email_send_override.css"
-# app_include_js = "/assets/email_send_override/js/email_send_override.js"
+# app_include_css = "/assets/frappe_email_send_override/css/frappe_email_send_override.css"
+# app_include_js = "/assets/frappe_email_send_override/js/frappe_email_send_override.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/email_send_override/css/email_send_override.css"
-# web_include_js = "/assets/email_send_override/js/email_send_override.js"
+# web_include_css = "/assets/frappe_email_send_override/css/frappe_email_send_override.css"
+# web_include_js = "/assets/frappe_email_send_override/js/frappe_email_send_override.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "email_send_override/public/scss/website"
+# website_theme_scss = "frappe_email_send_override/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -40,7 +38,7 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "email_send_override/public/icons.svg"
+# app_include_icons = "frappe_email_send_override/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -64,43 +62,43 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "email_send_override.utils.jinja_methods",
-# 	"filters": "email_send_override.utils.jinja_filters"
+# 	"methods": "frappe_email_send_override.utils.jinja_methods",
+# 	"filters": "frappe_email_send_override.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "email_send_override.install.before_install"
-# after_install = "email_send_override.install.after_install"
+# before_install = "frappe_email_send_override.install.before_install"
+# after_install = "frappe_email_send_override.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "email_send_override.uninstall.before_uninstall"
-# after_uninstall = "email_send_override.uninstall.after_uninstall"
+# before_uninstall = "frappe_email_send_override.uninstall.before_uninstall"
+# after_uninstall = "frappe_email_send_override.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "email_send_override.utils.before_app_install"
-# after_app_install = "email_send_override.utils.after_app_install"
+# before_app_install = "frappe_email_send_override.utils.before_app_install"
+# after_app_install = "frappe_email_send_override.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "email_send_override.utils.before_app_uninstall"
-# after_app_uninstall = "email_send_override.utils.after_app_uninstall"
+# before_app_uninstall = "frappe_email_send_override.utils.before_app_uninstall"
+# after_app_uninstall = "frappe_email_send_override.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "email_send_override.notifications.get_notification_config"
+# notification_config = "frappe_email_send_override.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -118,9 +116,7 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {
-    "Email Account": "email_send_override.overrides.email_account.EmailAccountOverride"
-}
+override_doctype_class = {"Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"}
 
 fixtures = [
     {
@@ -147,9 +143,9 @@ test_dict = {"key": "value"}
 
 # doc_events = {
 #     "*": {
-#         "on_update": "email_send_override.hello.world.foo",
-#         "on_cancel": "email_send_override.hello.world.foo",
-#         "on_trash": "email_send_override.hello.world.foo",
+#         "on_update": "frappe_email_send_override.hello.world.foo",
+#         "on_cancel": "frappe_email_send_override.hello.world.foo",
+#         "on_trash": "frappe_email_send_override.hello.world.foo",
 #     }
 # }
 
@@ -158,39 +154,39 @@ test_dict = {"key": "value"}
 
 # scheduler_events = {
 # 	"all": [
-# 		"email_send_override.tasks.all"
+# 		"frappe_email_send_override.tasks.all"
 # 	],
 # 	"daily": [
-# 		"email_send_override.tasks.daily"
+# 		"frappe_email_send_override.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"email_send_override.tasks.hourly"
+# 		"frappe_email_send_override.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"email_send_override.tasks.weekly"
+# 		"frappe_email_send_override.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"email_send_override.tasks.monthly"
+# 		"frappe_email_send_override.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "email_send_override.install.before_tests"
+# before_tests = "frappe_email_send_override.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "email_send_override.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "frappe_email_send_override.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "email_send_override.task.get_dashboard_data"
+# 	"Task": "frappe_email_send_override.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -204,13 +200,13 @@ test_dict = {"key": "value"}
 
 # Request Events
 # ----------------
-# before_request = ["email_send_override.utils.before_request"]
-# after_request = ["email_send_override.utils.after_request"]
+# before_request = ["frappe_email_send_override.utils.before_request"]
+# after_request = ["frappe_email_send_override.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["email_send_override.utils.before_job"]
-# after_job = ["email_send_override.utils.after_job"]
+# before_job = ["frappe_email_send_override.utils.before_job"]
+# after_job = ["frappe_email_send_override.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -240,7 +236,7 @@ test_dict = {"key": "value"}
 # --------------------------------
 
 # auth_hooks = [
-# 	"email_send_override.auth.validate"
+# 	"frappe_email_send_override.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
