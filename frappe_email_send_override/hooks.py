@@ -1,4 +1,4 @@
-app_name = "frappe_frappe_email_send_override"
+app_name = "frappe_email_send_override"
 app_title = "Frappe Email Send Override"
 app_publisher = "rtCamp"
 app_description = "Override outgoing emails SMTP server"
