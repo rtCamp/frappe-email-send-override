@@ -1,6 +1,9 @@
-# Email Send Override Frappe
+<div align="center">
+<img src="email.png" height="128" alt="Logo">
+<h2>Frappe Email Send Override</h2>
+</div>
 
-The app is used to enable different usernames and passwords for outgoing and incoming servers with the same email account in Frappe.
+The app enhances the Frappe framework's Email Account functionality by enabling the configuration of different credentials for outgoing and incoming mail servers within the same email account. This feature is particularly useful when the SMTP server and the incoming mail server require separate authentication details.
 
 ## Installation
 
@@ -13,13 +16,18 @@ bench get-app https://github.com/rtCamp/frappe-email-send-override.git
 2. Install the app on your site
 
 ```bash
-bench --site [site-name] install-app email_send_override
+bench --site [site-name] install-app frappe_email_send_override
 ```
 
 #### Setup App on Frappe Site
 
 Please refer to the [wiki](https://github.com/rtCamp/frappe-email-send-override/wiki) for setting up and using the app in Frappe site.
 
-#### License
 
-This project is licensed under the MIT License.
+## Contribution Guide
+
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the [AGPLv3 License](./LICENSE).

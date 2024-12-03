@@ -1,6 +1,6 @@
-from frappe.utils import cint
 import frappe
 from frappe.email.doctype.email_account.email_account import EmailAccount
+from frappe.utils import cint
 
 
 class EmailAccountOverride(EmailAccount):
@@ -13,11 +13,7 @@ class EmailAccountOverride(EmailAccount):
             login_id = self.custom_outgoing_server_username
 
         if self.custom_outgoing_server_password:
-            raise_exception = not (
-                self.auth_method == "OAuth"
-                or self.no_smtp_authentication
-                or frappe.flags.in_test
-            )
+            raise_exception = not (self.auth_method == "OAuth" or self.no_smtp_authentication or frappe.flags.in_test)
             password = self.get_password(
                 fieldname="custom_outgoing_server_password",
                 raise_exception=raise_exception,
@@ -32,7 +28,5 @@ class EmailAccountOverride(EmailAccount):
             "use_ssl": cint(self.use_ssl_for_outgoing),
             "use_tls": cint(self.use_tls),
             "use_oauth": self.auth_method == "OAuth",
-            "access_token": (
-                oauth_token.get_password("access_token") if oauth_token else None
-            ),
+            "access_token": (oauth_token.get_password("access_token") if oauth_token else None),
         }
