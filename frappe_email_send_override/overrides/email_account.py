@@ -19,7 +19,7 @@ class EmailAccountOverride(EmailAccount):
                 raise_exception=raise_exception,
             )
 
-        use_oauth= cint(not self.custom_outgoing_server_username and not self.custom_outgoing_server_password)
+        use_oauth = cint(not self.custom_outgoing_server_username and not self.custom_outgoing_server_password)
         return {
             "email_account": self.name,
             "server": self.smtp_server,
