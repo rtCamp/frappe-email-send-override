@@ -19,6 +19,7 @@ class EmailAccountOverride(EmailAccount):
                 raise_exception=raise_exception,
             )
 
+        use_oauth = cint(not self.custom_outgoing_server_username and not self.custom_outgoing_server_password)
         return {
             "email_account": self.name,
             "server": self.smtp_server,
@@ -27,6 +28,6 @@ class EmailAccountOverride(EmailAccount):
             "password": password,
             "use_ssl": cint(self.use_ssl_for_outgoing),
             "use_tls": cint(self.use_tls),
-            "use_oauth": self.auth_method == "OAuth",
+            "use_oauth": use_oauth,
             "access_token": (oauth_token.get_password("access_token") if oauth_token else None),
         }
