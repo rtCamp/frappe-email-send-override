@@ -4,5 +4,3 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
-
-frappe_email_send_override.patches.update_email_account
