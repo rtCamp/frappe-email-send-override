@@ -128,6 +128,7 @@ fixtures = [
                 {
                     "Email Account-custom_outgoing_server_username",
                     "Email Account-custom_outgoing_server_password",
+                    "Email Account-custom_use_separate_credential_for_outgoing"
                 },
             ]
         ],
