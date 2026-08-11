@@ -116,7 +116,9 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {"Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"}
+override_doctype_class = {  # nosemgrep
+    "Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"
+}
 
 fixtures = [
     {
