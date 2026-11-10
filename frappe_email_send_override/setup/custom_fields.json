@@ -1,0 +1,26 @@
+{
+  "Email Account": [
+    {
+      "fieldname": "custom_use_separate_credential_for_outgoing",
+      "fieldtype": "Check",
+      "insert_after": "smtp_port",
+      "label": "Use Separate Credential For Outgoing"
+    },
+    {
+      "depends_on": "eval:doc.custom_use_separate_credential_for_outgoing",
+      "fieldname": "custom_outgoing_server_username",
+      "fieldtype": "Data",
+      "insert_after": "custom_use_separate_credential_for_outgoing",
+      "label": "Outgoing Server Username",
+      "mandatory_depends_on": "eval:doc.custom_use_separate_credential_for_outgoing"
+    },
+    {
+      "depends_on": "eval:doc.custom_use_separate_credential_for_outgoing",
+      "fieldname": "custom_outgoing_server_password",
+      "fieldtype": "Password",
+      "insert_after": "custom_outgoing_server_username",
+      "label": "Outgoing Server Password",
+      "mandatory_depends_on": "eval:doc.custom_use_separate_credential_for_outgoing"
+    }
+  ]
+}
