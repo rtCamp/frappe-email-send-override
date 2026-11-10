@@ -70,7 +70,11 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # ------------
 
 # before_install = "frappe_email_send_override.install.before_install"
-# after_install = "frappe_email_send_override.install.after_install"
+after_install = "frappe_email_send_override.install.after_install"
+
+# Custom fields live in setup/custom_fields.json. create_custom_fields(..., update=True)
+# is idempotent, so it is safe to run on every migrate.
+after_migrate = "frappe_email_send_override.setup.install"
 
 # Uninstallation
 # ------------
@@ -120,22 +124,11 @@ override_doctype_class = {  # nosemgrep
     "Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"
 }
 
-fixtures = [
-    {
-        "dt": "Custom Field",
-        "filters": [
-            [
-                "name",
-                "in",
-                {
-                    "Email Account-custom_outgoing_server_username",
-                    "Email Account-custom_outgoing_server_password",
-                    "Email Account-custom_use_separate_credential_for_outgoing",
-                },
-            ]
-        ],
-    },
-]
+# Fixtures
+# ----------
+
+# Custom fields are installed from setup/custom_fields.json (see after_migrate).
+fixtures = []
 
 # Document Events
 # ---------------
