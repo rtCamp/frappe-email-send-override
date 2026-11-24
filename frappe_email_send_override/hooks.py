@@ -116,7 +116,9 @@ app_license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
 # ---------------
 # Override standard doctype classes
 
-override_doctype_class = {"Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"}
+# A mixin, not override_doctype_class: Frappe keeps only one override class per DocType,
+# and ours replaced Helpdesk's Email Account class (and its reply threading).
+extend_doctype_class = {"Email Account": "frappe_email_send_override.overrides.email_account.EmailAccountOverride"}
 
 fixtures = [
     {
