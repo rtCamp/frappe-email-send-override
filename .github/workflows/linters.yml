@@ -24,6 +24,10 @@ jobs:
         run: |
           apk --no-cache add tar nodejs npm python3 git bash py3-pip
           apk --no-cache add prettier --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+          # Alpine ships npm 11.12.x, which refuses the git+file package pre-commit uses to
+          # install node hooks (EALLOWGIT). 11.13.0 fixed it; npm 12 refuses git packages by
+          # default, so pin the minor version.
+          npm install -g npm@11.13.0
           # check python modules installed versions
           python3 -m pip freeze --local
           pip install pre-commit --break-system-packages
