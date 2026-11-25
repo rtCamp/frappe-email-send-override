@@ -1,9 +1,16 @@
 import frappe
-from frappe.email.doctype.email_account.email_account import EmailAccount
 from frappe.utils import cint
 
 
-class EmailAccountOverride(EmailAccount):
+class EmailAccountOverride:
+    """Mixin for Email Account, registered through `extend_doctype_class`.
+
+    It used to be an `override_doctype_class`. Frappe uses only one override class per
+    DocType (from the app installed last), so it replaced Helpdesk's Email Account class
+    and switched off Helpdesk's reply threading. A mixin is stacked on top of whichever
+    class is active, so both work.
+    """
+
     def sendmail_config(self):
         if (
             not hasattr(self, "custom_use_separate_credential_for_outgoing")
